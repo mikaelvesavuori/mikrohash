@@ -69,6 +69,7 @@ export class MikroHash {
    * @description Set the default encoding of hashes.
    * Valid encodings are:
    * - `base64`
+   * - `base64url`
    * - `hex`
    * - `binary`
    * @example
