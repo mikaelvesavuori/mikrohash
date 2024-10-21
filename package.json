@@ -1,7 +1,7 @@
 {
   "name": "mikrohash",
   "description": "MikroHash is a simple, zero-dependency, tested way to hash string values to hex, base64, or binary.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Mikael Vesavuori",
   "license": "MIT",
   "type": "module",
