@@ -1,0 +1,63 @@
+{
+  "name": "mikrohash",
+  "description": "MikroHash is a simple, zero-dependency, tested way to hash string values to hex, base64, or binary.",
+  "version": "0.0.1",
+  "author": "Mikael Vesavuori",
+  "license": "MIT",
+  "type": "module",
+  "main": "lib/index.cjs",
+  "module": "lib/index.js",
+  "exports": {
+    ".": {
+      "require": "./lib/index.cjs",
+      "import": "./lib/index.js"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikaelvesavuori/mikrohash.git"
+  },
+  "keywords": [
+    "node.js",
+    "node",
+    "hash",
+    "hashing"
+  ],
+  "bugs": {
+    "url": "https://github.com/mikaelvesavuori/mikrohash/issues"
+  },
+  "homepage": "https://github.com/mikaelvesavuori/mikrohash#readme",
+  "files": [
+    "/lib",
+    "!/lib/**/*.map",
+    "!/tests"
+  ],
+  "scripts": {
+    "start": "npx ts-node src/index.ts",
+    "test": "npx vitest run --coverage",
+    "test:watch": "npx vitest",
+    "build": "npm run clean && tsup src --format esm,cjs --dts && mv dist lib",
+    "clean": "rm -rf lib && rm -rf dist",
+    "package": "npm pack",
+    "prepublishOnly": "npm run build",
+    "prepare": "husky",
+    "docs": "npm run docs:clean && npm run docs:typedoc",
+    "docs:clean": "rm -rf docs",
+    "docs:typedoc": "npx typedoc --entryPoints src --entryPointStrategy expand --exclude '**/*+(test).ts' --externalPattern 'node_modules/**/*' --excludeExternals --out docs/"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "@typescript-eslint/eslint-plugin": "latest",
+    "@typescript-eslint/parser": "latest",
+    "@vitest/coverage-v8": "latest",
+    "eslint": "8",
+    "eslint-config-prettier": "latest",
+    "eslint-plugin-prettier": "latest",
+    "husky": "latest",
+    "prettier": "latest",
+    "tsup": "latest",
+    "typescript": "5",
+    "typedoc": "latest",
+    "vitest": "latest"
+  }
+}
