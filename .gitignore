@@ -7,3 +7,10 @@ coverage/
 node_modules/
 docs/
 *.tgz
+
+# Files
+.dccache
+.DS_Store
+.env
+*.tgz
+*.zip
