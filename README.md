@@ -1,6 +1,6 @@
 # MikroHash
 
-**MikroHash is a simple, zero-dependency, tested way to hash string values to hex, base64, or binary.**
+**MikroHash is a simple, zero-dependency, tested way to hash string values to hex, base64, URL-safe base64, or binary.**
 
 ![Build Status](https://github.com/mikaelvesavuori/mikrohash/workflows/main/badge.svg)
 
