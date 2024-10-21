@@ -3,4 +3,4 @@ export type MikroHashOptions = {
   encoding?: Encoding;
 };
 
-export type Encoding = 'base64' | 'hex' | 'binary';
+export type Encoding = 'base64' | 'base64url' | 'hex' | 'binary';

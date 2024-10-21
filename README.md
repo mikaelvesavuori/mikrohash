@@ -2,11 +2,17 @@
 
 **MikroHash is a simple, zero-dependency, tested way to hash string values to hex, base64, or binary.**
 
+![Build Status](https://github.com/mikaelvesavuori/mikrohash/workflows/main/badge.svg)
+
+[![codecov](https://codecov.io/gh/mikaelvesavuori/mikrohash/graph/badge.svg?token=02721R3RGK)](https://codecov.io/gh/mikaelvesavuori/mikrohash)
+
+[![Maintainability](https://api.codeclimate.com/v1/badges/a3f5bfabb00f8dc33142/maintainability)](https://codeclimate.com/github/mikaelvesavuori/mikrohash/maintainability)
+
 Why wouldn't you just write your own hashing utility? You could! Node.js already has tools for this (which MikroHash uses), but for some of us it's not crystal-clear how they work or how to get around somewhat opaque cases. The goal of MikroHash is simply to ease your life so you have to deal with less frustration when you need hashing.
 
 - Dead easy
 - No proprietary stuff – just Node.js native methods under the hood
-- Tiny (~X.X KB gzipped)
+- Tiny (~0.63 KB gzipped)
 - Zero dependencies
 - Has 100% test coverage
 
@@ -37,7 +43,8 @@ customHash.hash('hello world');
 
 The valid encodings are:
 
-- `base64` (**default**)
+- `base64`
+- `base64url` (**default**)
 - `hex`
 - `binary`
 
@@ -46,6 +53,7 @@ The valid encodings are:
 While SHA-256 is used for hashing, the output hashes always have a maximum length related to the encoding.
 
 - `base64`: 44
+- `base64url`: 44
 - `hex`: 64
 - `binary`: 32
 

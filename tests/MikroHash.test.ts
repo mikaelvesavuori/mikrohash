@@ -51,8 +51,12 @@ describe('Hash length', () => {
     expect(hash.length).toBe(40);
   });
 
-  test('It should have a length that is no more than 44 for base64 encoding', () => {
+  test('It should have a length that is no more than 44 for base64url encoding', () => {
     expect(() => new MikroHash().hash(id, 45)).toThrowError();
+  });
+
+  test('It should have a length that is no more than 44 for base64 encoding', () => {
+    expect(() => new MikroHash({ encoding: 'base64' }).hash(id, 45)).toThrowError();
   });
 
   test('It should have a length that is no more than 64 for hex encoding', () => {

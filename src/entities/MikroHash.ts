@@ -15,9 +15,9 @@ import { InvalidEncodingError, LengthNotWithinBoundsError } from '../errors/erro
  */
 export class MikroHash {
   private length: number = 16;
-  private encoding: Encoding = 'base64';
+  private encoding: Encoding = 'base64url';
 
-  private readonly validEncodings = ['base64', 'hex', 'binary'];
+  private readonly validEncodings = ['base64', 'base64url', 'hex', 'binary'];
 
   constructor(options?: MikroHashOptions) {
     if (options?.length) this.setLength(options.length);
